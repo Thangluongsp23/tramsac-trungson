@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xanh Coffee – Trạm Sạc Trung Sơn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .page-hero { padding: 160px 0 80px; text-align: center; background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,230,118,0.08), transparent 60%); border-bottom: 1px solid var(--border-subtle); }
+    .full-menu { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .menu-section-block { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius); overflow: hidden; }
+    .menu-section-header { padding: 20px 24px; background: rgba(0,230,118,0.05); border-bottom: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 10px; }
+    .menu-section-header h3 { font-size: 1rem; }
+    .menu-row { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; border-bottom: 1px solid rgba(255,255,255,0.03); }
+    .menu-row:last-child { border-bottom: none; }
+    .menu-row-name { font-size: 0.9rem; }
+    .menu-row-price { color: var(--accent); font-weight: 700; font-size: 0.9rem; white-space: nowrap; }
+    @media (max-width: 768px) { .full-menu { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.JPG" alt="Trung Sơn Logo">
+        <div class="nav-logo-text"><span>Trung Sơn</span><span>Xanh Coffee & EV Station</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="tram-sac.html">Trạm sạc</a></li>
+        <li><a href="xanh-coffee.html" class="active">Xanh Coffee</a></li>
+        <li><a href="loyalty.html">Tích điểm</a></li>
+        <li><a href="uu-dai.html">Ưu đãi</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-cta">
+        <button class="nav-btn nav-btn-outline" onclick="location.href='index.html#contact'">Xem bản đồ</button>
+        <button class="nav-btn nav-btn-filled" onclick="location.href='loyalty.html'">Đăng ký</button>
+      </div>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close">✕</button>
+  <a href="index.html">Trang chủ</a><a href="tram-sac.html">Trạm sạc</a><a href="xanh-coffee.html">Xanh Coffee</a>
+  <a href="loyalty.html">Tích điểm</a><a href="uu-dai.html">Ưu đãi</a><a href="blog.html">Blog</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="section-tag">Xanh Coffee</span>
+    <h1>Nạp lại năng lượng – <span class="accent">Không gian xanh</span></h1>
+    <p>Không gian thư giãn lý tưởng trong lúc chờ sạc. Sạch – mát – thư thái.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="coffee-grid">
+      <div class="coffee-content reveal from-left">
+        <span class="section-tag">Không gian</span>
+        <h2>Nghỉ ngơi đúng nghĩa trong lúc sạc</h2>
+        <p>Xanh Coffee không chỉ là quán nước – đây là không gian được thiết kế để bạn thực sự thư giãn trong khoảng thời gian chờ sạc.</p>
+        <div class="coffee-perks" style="margin-top: 28px;">
+          <div class="perk-item"><span class="perk-icon">❄️</span><span>Điều hòa mát lạnh</span></div>
+          <div class="perk-item"><span class="perk-icon">🛏️</span><span>Ghế giường nghỉ</span></div>
+          <div class="perk-item"><span class="perk-icon">📶</span><span>WiFi tốc độ cao</span></div>
+          <div class="perk-item"><span class="perk-icon">🔌</span><span>Ổ sạc điện thoại</span></div>
+          <div class="perk-item"><span class="perk-icon">🚿</span><span>Nhà vệ sinh sạch</span></div>
+          <div class="perk-item"><span class="perk-icon">👨‍👩‍👧</span><span>Thân thiện gia đình</span></div>
+        </div>
+      </div>
+      <div class="coffee-visual reveal from-right">
+        <div class="coffee-card-main">
+          <div class="coffee-img-placeholder" style="height: 320px; padding: 0; overflow: hidden;">
+            <img src="2.jpg" alt="Không gian Xanh Coffee" style="width:100%; height:100%; object-fit:cover; display:block;">
+            <div style="position:absolute; bottom:0; left:0; right:0; padding: 20px; background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+              <span style="font-size: 0.8rem; color: var(--accent); font-weight: 700; letter-spacing: 0.05em;">XANH COFFEE</span>
+              <p style="font-size: 0.72rem; color: rgba(255,255,255,0.65); margin-top: 3px;">Không gian sạch – mát – thư thái</p>
+            </div>
+          </div>
+          <div class="coffee-card-content">
+            <p style="font-size: 0.85rem;">Mở cửa: <strong style="color: var(--accent);">7:30 – 22:00</strong> mỗi ngày · Phục vụ nhanh, không gian sạch mát</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="full-menu">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Thực đơn đầy đủ</span>
+      <h2>Menu Xanh Coffee</h2>
+      <p>Đồ uống đa dạng, giá hợp lý – phù hợp cho mọi khách ghé trạm.</p>
+    </div>
+    <div class="full-menu stagger-children">
+      <div class="menu-section-block">
+        <div class="menu-section-header"><span>☕</span><h3>Cà phê</h3></div>
+        <div class="menu-row"><span class="menu-row-name">Cà phê đen</span><span class="menu-row-price">20.000đ</span></div>
+        <div class="menu-row"><span class="menu-row-name">Cà phê nâu</span><span class="menu-row-price">25.000đ</span></div>
+        <div class="menu-row"><span class="menu-row-name">Cà phê muối</span><span class="menu-row-price">25.000đ</span></div>
+        <div class="menu-row"><span class="menu-row-name">Bạc xỉu</span><span class="menu-row-price">25.000đ</span></div>
+        <div class="menu-row"><span class="menu-row-name">Cacao</span><span class="menu-row-price">30.000đ</span></div>
+      </div>
+      <div class="menu-section-block">
+        <div class="menu-section-header"><span>🍵</span><h3>Trà</h3></div>
+        <div class="menu-row"><span class="menu-row-name">Trà tắc / Trà chanh</span><span class="menu-row-price">15.000đ</span></div>
+        <div class="menu-row"><span class="menu-row-name">Trà đào</span><span class="menu-row-price">25.000đ</span></div>
+        <div class="menu-row"><span class="menu-row-name">Trà việt quất</span><span class="menu-row-price">25.000đ</span></div>
+        <div class="menu-row"><span class="menu-row-name">Trà đào macchiato</span><span class="menu-row-price">30.000đ</span></div>
+      </div>
+      <div class="menu-section-block">
+        <div class="menu-section-header"><span>🧃</span><h3>Nước ép & Sinh tố</h3></div>
+        <div class="menu-row"><span class="menu-row-name">Nước ép cam</span><span class="menu-row-price">35.000đ</span></div>
+        <div class="menu-row"><span class="menu-row-name">Nước ép dưa hấu</span><span class="menu-row-price">30.000đ</span></div>
+        <div class="menu-row"><span class="menu-row-name">Sinh tố bơ</span><span class="menu-row-price">35.000đ</span></div>
+        <div class="menu-row"><span class="menu-row-name">Sinh tố mãng cầu</span><span class="menu-row-price">35.000đ</span></div>
+        <div class="menu-row"><span class="menu-row-name">Sinh tố xoài</span><span class="menu-row-price">30.000đ</span></div>
+      </div>
+      <div class="menu-section-block">
+        <div class="menu-section-header"><span>🥛</span><h3>Sữa chua</h3></div>
+        <div class="menu-row"><span class="menu-row-name">Sữa chua đánh đá</span><span class="menu-row-price">25.000đ</span></div>
+        <div class="menu-row"><span class="menu-row-name">Sữa chua nha đam</span><span class="menu-row-price">30.000đ</span></div>
+        <div class="menu-row"><span class="menu-row-name">Sữa chua việt quất</span><span class="menu-row-price">30.000đ</span></div>
+      </div>
+      <div class="menu-section-block">
+        <div class="menu-section-header"><span>🥥</span><h3>Nước giải khát</h3></div>
+        <div class="menu-row"><span class="menu-row-name">Dừa tươi</span><span class="menu-row-price">30.000đ</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="padding-top: 32px; border-top: 1px solid var(--border-subtle);">
+      <p>© 2024 <span>Trạm Sạc Trung Sơn</span>. <a href="index.html" style="color: var(--accent);">← Về trang chủ</a></p>
+      <p>📞 <a href="tel:0799015699" style="color: var(--accent);">079 901 5699</a></p>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

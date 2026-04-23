@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog – Trạm Sạc Trung Sơn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .page-hero { padding: 160px 0 80px; text-align: center; background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,230,118,0.08), transparent 60%); border-bottom: 1px solid var(--border-subtle); }
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .blog-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius); overflow: hidden; transition: all 0.3s; cursor: pointer; }
+    .blog-card:hover { border-color: var(--border); transform: translateY(-4px); }
+    .blog-img { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; }
+    .blog-content { padding: 24px; }
+    .blog-tag { display: inline-block; background: rgba(0,230,118,0.1); color: var(--accent); padding: 3px 10px; border-radius: 100px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+    .blog-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; line-height: 1.4; }
+    .blog-excerpt { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+    .blog-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-subtle); }
+    .blog-date { font-size: 0.75rem; color: var(--text-muted); }
+    .blog-read { font-size: 0.75rem; color: var(--accent); font-weight: 600; }
+    @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.JPG" alt="Logo">
+        <div class="nav-logo-text"><span>Trung Sơn</span><span>Xanh Coffee & EV Station</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang chủ</a></li><li><a href="tram-sac.html">Trạm sạc</a></li>
+        <li><a href="xanh-coffee.html">Xanh Coffee</a></li><li><a href="loyalty.html">Tích điểm</a></li>
+        <li><a href="uu-dai.html">Ưu đãi</a></li><li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+      <div class="nav-cta">
+        <button class="nav-btn nav-btn-outline" onclick="location.href='index.html#contact'">Xem bản đồ</button>
+        <button class="nav-btn nav-btn-filled" onclick="location.href='loyalty.html'">Đăng ký</button>
+      </div>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close">✕</button>
+  <a href="index.html">Trang chủ</a><a href="tram-sac.html">Trạm sạc</a><a href="xanh-coffee.html">Xanh Coffee</a>
+  <a href="loyalty.html">Tích điểm</a><a href="uu-dai.html">Ưu đãi</a><a href="blog.html">Blog</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="section-tag">Blog & Tin tức</span>
+    <h1>Tin tức từ <span class="accent">Trung Sơn</span></h1>
+    <p>Cập nhật thông báo trạm, mẹo sử dụng xe điện và hình ảnh từ cộng đồng khách hàng.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="blog-grid stagger-children">
+      <div class="blog-card">
+        <div class="blog-img" style="background: linear-gradient(135deg, #071a07, #0d2a0d);">📢</div>
+        <div class="blog-content">
+          <span class="blog-tag">Thông báo</span>
+          <div class="blog-title">Khai trương trạm sạc Trung Sơn – Hoằng Hóa</div>
+          <p class="blog-excerpt">Trạm sạc xe điện Trung Sơn chính thức đi vào hoạt động với 5 trụ sạc DC công suất cao và không gian Xanh Coffee hiện đại.</p>
+          <div class="blog-meta"><span class="blog-date">Tháng 4, 2024</span><span class="blog-read">Đọc thêm →</span></div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img" style="background: linear-gradient(135deg, #1a1507, #2a200d);">🔧</div>
+        <div class="blog-content">
+          <span class="blog-tag">Bảo trì</span>
+          <div class="blog-title">Lịch bảo trì định kỳ tháng 5/2024</div>
+          <p class="blog-excerpt">Trạm sẽ bảo trì định kỳ vào ngày 15/05. Dự kiến hoàn thành sau 4 tiếng. Xanh Coffee vẫn hoạt động bình thường.</p>
+          <div class="blog-meta"><span class="blog-date">Tháng 5, 2024</span><span class="blog-read">Đọc thêm →</span></div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img" style="background: linear-gradient(135deg, #071a1a, #0d2a2a);">⚡</div>
+        <div class="blog-content">
+          <span class="blog-tag">Mẹo xe điện</span>
+          <div class="blog-title">5 mẹo sạc xe điện đúng cách để tăng tuổi thọ pin</div>
+          <p class="blog-excerpt">Không nên sạc đầy 100% mỗi ngày. Giữ pin trong khoảng 20–80% sẽ kéo dài đáng kể tuổi thọ của pin xe điện.</p>
+          <div class="blog-meta"><span class="blog-date">Tháng 4, 2024</span><span class="blog-read">Đọc thêm →</span></div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img" style="background: linear-gradient(135deg, #1a071a, #2a0d2a);">📸</div>
+        <div class="blog-content">
+          <span class="blog-tag">Khách hàng</span>
+          <div class="blog-title">Hình ảnh check-in từ khách hàng tháng 4</div>
+          <p class="blog-excerpt">Cảm ơn quý khách đã tin tưởng và ghé trạm. Những khoảnh khắc đẹp từ khách hàng làm chúng tôi có thêm động lực.</p>
+          <div class="blog-meta"><span class="blog-date">Tháng 4, 2024</span><span class="blog-read">Đọc thêm →</span></div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img" style="background: linear-gradient(135deg, #07071a, #0d0d2a);">🚗</div>
+        <div class="blog-content">
+          <span class="blog-tag">Mẹo xe điện</span>
+          <div class="blog-title">So sánh chi phí xe điện và xe xăng sau 1 năm sử dụng</div>
+          <p class="blog-excerpt">Với giá điện hiện tại, chi phí vận hành xe điện chỉ bằng 1/3 so với xe xăng cùng phân khúc. Tính toán chi tiết trong bài viết.</p>
+          <div class="blog-meta"><span class="blog-date">Tháng 3, 2024</span><span class="blog-read">Đọc thêm →</span></div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img" style="background: linear-gradient(135deg, #1a0707, #2a0d0d);">🎁</div>
+        <div class="blog-content">
+          <span class="blog-tag">Ưu đãi</span>
+          <div class="blog-title">Ra mắt chương trình tích điểm – Lợi ích tăng dần</div>
+          <p class="blog-excerpt">Chính thức ra mắt chương trình thành viên với 3 hạng: Đồng, Bạc, Vàng. Đăng ký ngay để nhận điểm từ lần đầu tiên.</p>
+          <div class="blog-meta"><span class="blog-date">Tháng 4, 2024</span><span class="blog-read">Đọc thêm →</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="padding-top: 32px; border-top: 1px solid var(--border-subtle);">
+      <p>© 2024 <span>Trạm Sạc Trung Sơn</span>. <a href="index.html" style="color: var(--accent);">← Về trang chủ</a></p>
+      <p>📞 <a href="tel:0799015699" style="color: var(--accent);">079 901 5699</a></p>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

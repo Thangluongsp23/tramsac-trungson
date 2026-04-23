@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ưu đãi – Trạm Sạc Trung Sơn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .page-hero { padding: 160px 0 80px; text-align: center; background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,230,118,0.08), transparent 60%); border-bottom: 1px solid var(--border-subtle); }
+    .promo-full-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .promo-big-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius); padding: 36px; position: relative; overflow: hidden; transition: all 0.3s; }
+    .promo-big-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-dark)); }
+    .promo-big-card:hover { border-color: var(--border); transform: translateY(-4px); }
+    .promo-big-card .promo-icon { font-size: 3rem; margin-bottom: 20px; }
+    .promo-big-card .promo-value { font-size: 2rem; font-weight: 800; color: var(--accent); margin-top: 16px; }
+    .promo-terms { font-size: 0.75rem; color: var(--text-muted); margin-top: 12px; }
+    @media (max-width: 768px) { .promo-full-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.JPG" alt="Logo">
+        <div class="nav-logo-text"><span>Trung Sơn</span><span>Xanh Coffee & EV Station</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang chủ</a></li><li><a href="tram-sac.html">Trạm sạc</a></li>
+        <li><a href="xanh-coffee.html">Xanh Coffee</a></li><li><a href="loyalty.html">Tích điểm</a></li>
+        <li><a href="uu-dai.html" class="active">Ưu đãi</a></li><li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-cta">
+        <button class="nav-btn nav-btn-outline" onclick="location.href='index.html#contact'">Xem bản đồ</button>
+        <button class="nav-btn nav-btn-filled" onclick="location.href='loyalty.html'">Đăng ký</button>
+      </div>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close">✕</button>
+  <a href="index.html">Trang chủ</a><a href="tram-sac.html">Trạm sạc</a><a href="xanh-coffee.html">Xanh Coffee</a>
+  <a href="loyalty.html">Tích điểm</a><a href="uu-dai.html">Ưu đãi</a><a href="blog.html">Blog</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="section-tag">Khuyến mãi</span>
+    <h1>Ưu đãi <span class="accent">hàng ngày</span></h1>
+    <p>Nhiều chương trình ưu đãi hấp dẫn dành cho khách hàng của Trạm Sạc Trung Sơn.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Đang áp dụng</span>
+      <h2>Ưu đãi hiện hành</h2>
+    </div>
+    <div class="promo-full-grid stagger-children">
+      <div class="promo-big-card">
+        <div class="promo-badge">Giờ thấp điểm</div>
+        <div class="promo-icon">⏰</div>
+        <h3>Sạc giờ thấp điểm – Giảm 20% đồ uống</h3>
+        <p>Sạc xe trong khung giờ <strong>14:00 – 16:00</strong> hoặc <strong>18:00 – 20:00</strong>, nhận ngay ưu đãi giảm 20% toàn bộ đồ uống tại Xanh Coffee.</p>
+        <div class="promo-value">Giảm 20% đồ uống</div>
+        <p class="promo-terms">* Áp dụng khi xuất trình biên lai sạc trong khung giờ ưu đãi. Mỗi khách 1 lần/ngày.</p>
+      </div>
+      <div class="promo-big-card">
+        <div class="promo-badge">Combo tiết kiệm</div>
+        <div class="promo-icon">⚡☕</div>
+        <h3>Combo Sạc + Cà phê</h3>
+        <p>Mua đồ uống tại Xanh Coffee khi sạc xe, nhận ưu đãi giảm 10% tổng hóa đơn combo.</p>
+        <div class="promo-value">Giảm 10%</div>
+        <p class="promo-terms">* Áp dụng khi xuất trình biên lai sạc xe trong ngày.</p>
+      </div>
+      <div class="promo-big-card">
+        <div class="promo-badge">Cuối tuần</div>
+        <div class="promo-icon">🎉</div>
+        <h3>Nhân đôi điểm cuối tuần</h3>
+        <p>Mọi giao dịch vào Thứ 7 và Chủ nhật được tự động nhân đôi điểm thưởng tích lũy.</p>
+        <div class="promo-value">x2 điểm</div>
+        <p class="promo-terms">* Tự động áp dụng cho tài khoản thành viên đã đăng ký.</p>
+      </div>
+      <div class="promo-big-card">
+        <div class="promo-badge">Khách thân thiết</div>
+        <div class="promo-icon">🥇</div>
+        <h3>Ưu đãi thành viên Vàng</h3>
+        <p>Thành viên hạng Vàng (từ 2000 điểm) được giảm 15% phí sạc mỗi lần và ưu tiên trụ sạc 120kW.</p>
+        <div class="promo-value">Giảm 15%</div>
+        <p class="promo-terms">* Chỉ áp dụng cho thành viên hạng Vàng. <a href="loyalty.html" style="color: var(--accent);">Đăng ký ngay</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="padding-top: 32px; border-top: 1px solid var(--border-subtle);">
+      <p>© 2024 <span>Trạm Sạc Trung Sơn</span>. <a href="index.html" style="color: var(--accent);">← Về trang chủ</a></p>
+      <p>📞 <a href="tel:0799015699" style="color: var(--accent);">079 901 5699</a></p>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

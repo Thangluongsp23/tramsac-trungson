@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chương trình tích điểm – Trạm Sạc Trung Sơn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .page-hero {
+      padding: 160px 0 80px;
+      text-align: center;
+      background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,125,62,0.12), transparent 60%);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    /* HOW IT WORKS STEPS */
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .how-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s;
+      position: relative;
+    }
+    .how-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(0,125,62,0.2); }
+    .how-step-num {
+      width: 36px; height: 36px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.85rem;
+      font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .how-icon { font-size: 2.4rem; margin-bottom: 14px; }
+    .how-card h3 { font-size: 1rem; margin-bottom: 10px; }
+    .how-card p { font-size: 0.85rem; }
+
+    /* EARN SECTION */
+    .earn-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .earn-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s;
+    }
+    .earn-card:hover { border-color: rgba(0,125,62,0.25); box-shadow: var(--shadow-md); }
+    .earn-icon-wrap {
+      width: 56px; height: 56px;
+      background: var(--accent-light);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+    .earn-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+    .earn-title { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+    .earn-desc { font-size: 0.85rem; color: var(--text-secondary); }
+
+    /* REWARDS */
+    .reward-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .reward-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .reward-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--accent));
+      transform: scaleX(0); transition: transform 0.35s;
+    }
+    .reward-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: rgba(0,125,62,0.2); }
+    .reward-card:hover::before { transform: scaleX(1); }
+    .reward-icon { font-size: 3rem; margin-bottom: 16px; }
+    .reward-icon-img {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 0 auto 16px;
+      display: block;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+    .reward-card h3 { font-size: 1rem; margin-bottom: 10px; }
+    .reward-card p { font-size: 0.85rem; }
+    .reward-tag {
+      display: inline-block;
+      margin-top: 16px;
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      border: 1.5px solid rgba(0,125,62,0.2);
+      padding: 5px 14px;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    /* CHECK POINTS */
+    .check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .check-steps { display: flex; flex-direction: column; gap: 16px; }
+    .check-step {
+      display: flex; gap: 16px; align-items: flex-start;
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    .check-num {
+      width: 30px; height: 30px; flex-shrink: 0;
+      background: var(--blue);
+      color: #fff; border-radius: 50%;
+      font-size: 0.8rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .check-step-text strong { display: block; font-size: 0.9rem; margin-bottom: 4px; color: var(--text-primary); }
+    .check-step-text span { font-size: 0.82rem; color: var(--text-secondary); }
+    .check-result-box {
+      background: linear-gradient(145deg, var(--bg-alt), #c8e8d8);
+      border: 1.5px solid rgba(0,125,62,0.2);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .check-result-box h3 { margin-bottom: 16px; }
+    .result-case { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .result-case:last-child { border-bottom: none; }
+    .result-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .result-case strong { display: block; font-size: 0.88rem; margin-bottom: 3px; }
+    .result-case span { font-size: 0.8rem; color: var(--text-secondary); }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 720px; margin: 0 auto; }
+    .faq-item {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-q {
+      padding: 18px 24px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      color: var(--text-primary);
+      user-select: none;
+      transition: background 0.2s;
+    }
+    .faq-q:hover { background: var(--bg-alt); }
+    .faq-q .faq-arrow { font-size: 0.75rem; transition: transform 0.3s; color: var(--accent); }
+    .faq-item.open .faq-q .faq-arrow { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.2s;
+      padding: 0 24px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+    .faq-item.open .faq-a { max-height: 200px; padding: 0 24px 18px; }
+
+    /* REGISTER */
+    .register-form {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 48px;
+      max-width: 520px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-md);
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-label { display: block; font-size: 0.82rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 8px; }
+    .form-input {
+      width: 100%; padding: 13px 16px;
+      background: var(--bg-primary);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 8px;
+      color: var(--text-primary);
+      font-size: 0.9rem; font-family: inherit;
+      transition: border-color 0.2s; outline: none;
+    }
+    .form-input:focus { border-color: var(--accent); background: #fff; }
+    .form-note {
+      background: var(--accent-light);
+      border: 1.5px solid rgba(0,125,62,0.2);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 0.82rem;
+      color: var(--accent-dark);
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .how-grid, .reward-grid { grid-template-columns: 1fr; }
+      .earn-grid { grid-template-columns: 1fr; }
+      .check-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.JPG" alt="Trung Sơn Logo">
+        <div class="nav-logo-text"><span>Trung Sơn</span><span>Xanh Coffee & EV Station</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="tram-sac.html">Trạm sạc</a></li>
+        <li><a href="xanh-coffee.html">Xanh Coffee</a></li>
+        <li><a href="loyalty.html" class="active">Tích điểm</a></li>
+        <li><a href="uu-dai.html">Ưu đãi</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-cta">
+        <button class="nav-btn nav-btn-outline" onclick="location.href='index.html#contact'">Xem bản đồ</button>
+        <button class="nav-btn nav-btn-filled" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">Đăng ký ngay</button>
+      </div>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close">✕</button>
+  <a href="index.html">Trang chủ</a><a href="tram-sac.html">Trạm sạc</a><a href="xanh-coffee.html">Xanh Coffee</a>
+  <a href="loyalty.html">Tích điểm</a><a href="uu-dai.html">Ưu đãi</a><a href="blog.html">Blog</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="container">
+    <span class="section-tag">Chương trình thành viên</span>
+    <h1>Uống cà phê – <span class="accent">Tích ly – Nhận quà</span></h1>
+    <p>Mỗi ly cà phê tại Xanh Coffee đều được ghi nhận. Tích đủ ly để nhận ly miễn phí, khăn lau xe và bình nước – hoàn toàn miễn phí.</p>
+  </div>
+</div>
+
+<!-- CÁCH HOẠT ĐỘNG -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Cách hoạt động</span>
+      <h2>Đơn giản – Minh bạch – Không cần app</h2>
+      <p>Hệ thống quản lý bằng số điện thoại, nhân viên tra cứu ngay tại quầy cho bạn.</p>
+    </div>
+    <div class="how-grid stagger-children">
+      <div class="how-card">
+        <div class="how-step-num">1</div>
+        <div class="how-icon">📱</div>
+        <h3>Cung cấp số điện thoại</h3>
+        <p>Khi đến gọi đồ uống hoặc sạc xe, chỉ cần cho nhân viên biết số điện thoại của bạn. Hệ thống sẽ nhận diện và tích điểm tự động.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-step-num">2</div>
+        <div class="how-icon">☕</div>
+        <h3>Tích ly mỗi lần ghé</h3>
+        <p>Mỗi ly đồ uống bạn gọi được ghi nhận vào tài khoản. Điểm cộng dồn qua tất cả các lần ghé, không giới hạn thời gian.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-step-num">3</div>
+        <div class="how-icon">🎁</div>
+        <h3>Đổi quà khi đủ điều kiện</h3>
+        <p>Khi tích đủ, nhân viên sẽ chủ động thông báo hoặc bạn có thể hỏi bất cứ lúc nào. Quà được trao ngay tại chỗ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÁCH TÍCH ĐIỂM -->
+<section class="section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Cách tích điểm</span>
+      <h2>Tích điểm từ đồ uống & sạc xe</h2>
+    </div>
+    <div class="earn-grid stagger-children">
+      <div class="earn-card">
+        <div class="earn-icon-wrap">☕</div>
+        <div>
+          <div class="earn-label">Xanh Coffee</div>
+          <div class="earn-title">Mỗi ly đồ uống = 1 điểm</div>
+          <p class="earn-desc">Gọi bao nhiêu ly, tích bấy nhiêu điểm. Áp dụng toàn bộ thực đơn tại Xanh Coffee.</p>
+        </div>
+      </div>
+      <div class="earn-card">
+        <div class="earn-icon-wrap">⚡</div>
+        <div>
+          <div class="earn-label">Trạm sạc</div>
+          <div class="earn-title">Sạc xe cũng được tích điểm</div>
+          <p class="earn-desc">Mỗi lần sạc tại trạm được cộng điểm vào tài khoản, khuyến khích khách quay lại thường xuyên.</p>
+        </div>
+      </div>
+    </div>
+    <div style="background: var(--bg-card); border: 1.5px solid rgba(0,125,62,0.2); border-radius: var(--radius-sm); padding: 18px 24px; margin-top: 20px; display: flex; gap: 12px; align-items: flex-start; box-shadow: var(--shadow-sm);" class="reveal">
+      <span style="font-size: 1.3rem;">💡</span>
+      <div>
+        <strong style="font-size: 0.88rem; color: var(--text-primary);">Ghi nhớ:</strong>
+        <span style="font-size: 0.85rem; color: var(--text-secondary);">
+          Hệ thống nhận diện chủ yếu qua <strong>số điện thoại</strong>. Dù bạn đi xe nào, đến một mình hay cả gia đình – chỉ cần đọc đúng số điện thoại là điểm vẫn được cộng đầy đủ.
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHẦN THƯỞNG -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Phần thưởng</span>
+      <h2>Quà tặng dành cho khách thân thiết</h2>
+      <p>Ba loại phần thưởng được trao trực tiếp tại quầy khi bạn tích đủ điều kiện.</p>
+    </div>
+    <div class="reward-grid stagger-children">
+      <div class="reward-card">
+        <div class="reward-icon">☕</div>
+        <h3>Ly cà phê miễn phí</h3>
+        <p>Tích đủ số ly theo quy định, nhận ngay 1 ly cà phê hoặc đồ uống bất kỳ miễn phí trong lần ghé tiếp theo.</p>
+        <span class="reward-tag">Đổi tự động khi đủ ly</span>
+      </div>
+      <div class="reward-card">
+        <img src="khan-lau-xe.jpeg" alt="Khăn lau xe ô tô" class="reward-icon-img">
+        <h3>Khăn lau xe ô tô</h3>
+        <p>Khăn microfiber 2 lớp siêu thấm – lau sạch không trầy, phù hợp mọi bề mặt xe. Quà tặng thiết thực cho mỗi tài xế.</p>
+        <span class="reward-tag">Quà hiện vật</span>
+      </div>
+      <div class="reward-card">
+        <img src="binh-giu-nhiet.jpeg" alt="Bình giữ nhiệt" class="reward-icon-img">
+        <h3>Bình giữ nhiệt</h3>
+        <p>Bình inox giữ nhiệt cao cấp – giữ nóng cà phê 12 tiếng, giữ lạnh nước mát suốt hành trình dài.</p>
+        <span class="reward-tag">Quà hiện vật</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRA CỨU ĐIỂM -->
+<section class="section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Tra cứu điểm</span>
+      <h2>Kiểm tra điểm tích lũy của bạn</h2>
+    </div>
+    <div class="check-grid">
+      <div class="reveal from-left">
+        <h3 style="margin-bottom: 20px;">Hỏi nhân viên tại quầy</h3>
+        <p style="margin-bottom: 24px;">Bất cứ lúc nào ghé trạm, bạn có thể hỏi nhân viên để biết số điểm và phần thưởng hiện có.</p>
+        <div class="check-steps">
+          <div class="check-step">
+            <div class="check-num">1</div>
+            <div class="check-step-text">
+              <strong>Cung cấp số điện thoại</strong>
+              <span>Đọc số điện thoại đã đăng ký cho nhân viên</span>
+            </div>
+          </div>
+          <div class="check-step">
+            <div class="check-num">2</div>
+            <div class="check-step-text">
+              <strong>Hoặc cung cấp biển số xe</strong>
+              <span>Nếu không nhớ SĐT, biển số xe cũng có thể dùng để tra cứu</span>
+            </div>
+          </div>
+          <div class="check-step">
+            <div class="check-num">3</div>
+            <div class="check-step-text">
+              <strong>Nhân viên thông báo kết quả</strong>
+              <span>Số ly đã tích, số ly còn thiếu, và phần thưởng đang có (nếu đủ điều kiện)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal from-right">
+        <div class="check-result-box">
+          <h3 style="margin-bottom: 4px;">Nhân viên sẽ thông báo</h3>
+          <p style="font-size: 0.82rem; margin-bottom: 16px;">3 trường hợp có thể xảy ra khi tra cứu:</p>
+          <div class="result-case">
+            <span class="result-icon">🆕</span>
+            <div>
+              <strong>Khách mới – chưa có trong hệ thống</strong>
+              <span>Nhân viên mời đăng ký thành viên ngay để bắt đầu tích điểm từ lần này.</span>
+            </div>
+          </div>
+          <div class="result-case">
+            <span class="result-icon">⏳</span>
+            <div>
+              <strong>Chưa đủ điểm đổi quà</strong>
+              <span>Thông báo số ly còn thiếu. Ví dụ: <em>"Anh còn thiếu 2 ly nữa là được tặng 1 ly ạ."</em></span>
+            </div>
+          </div>
+          <div class="result-case">
+            <span class="result-icon">🎉</span>
+            <div>
+              <strong>Đủ điều kiện nhận quà!</strong>
+              <span>Nhân viên mời nhận ly miễn phí hoặc quà hiện vật (khăn lau xe / bình nước) ngay tại chỗ.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Câu hỏi thường gặp</span>
+      <h2>Giải đáp thắc mắc</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Khách đi xe khác, biển số khác thì điểm có mất không?</span>
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-a">Không mất. Hệ thống quản lý chính theo <strong>số điện thoại</strong>. Dù đi xe nào, chỉ cần đọc đúng SĐT đã đăng ký là điểm vẫn được tích đầy đủ.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Khách muốn vừa tích điểm ly đang uống, vừa nhận quà khăn thì được không?</span>
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-a">Được. Nhân viên sẽ ghi nhận trong cùng 1 lần: tích số ly đang uống <strong>và</strong> trao quà khăn lau xe cho bạn trong cùng một lượt nhập.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Có cần tải app hay đăng ký online không?</span>
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-a">Không cần. Chỉ cần cung cấp số điện thoại cho nhân viên tại quầy là đủ. Hệ thống hoàn toàn được quản lý trực tiếp tại trạm.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Điểm có bị hết hạn không?</span>
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-a">Điểm tích lũy <strong>không giới hạn thời gian</strong> và được cộng dồn qua tất cả các lần ghé. Bạn có thể tích dần và đổi quà bất cứ khi nào đủ điều kiện.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Khách đã nhận ly miễn phí thì điểm tích tiếp có bị reset không?</span>
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-a">Không reset hoàn toàn. Hệ thống trừ đúng số điểm tương ứng với phần quà đã nhận, phần điểm còn lại (nếu có) vẫn được giữ nguyên để tiếp tục tích.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ĐĂNG KÝ -->
+<section id="register" class="section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Tham gia ngay</span>
+      <h2>Đăng ký thành viên – Miễn phí</h2>
+      <p>Điền thông tin bên dưới hoặc báo trực tiếp cho nhân viên tại quầy để bắt đầu tích điểm ngay hôm nay.</p>
+    </div>
+    <div class="register-form reveal scale-in">
+      <!-- FORM ĐĂNG KÝ -->
+      <form id="registerForm" action="https://formspree.io/f/xaqalrgk" method="POST" novalidate>
+        <!-- Honeypot chống spam -->
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_subject" value="Đăng ký thành viên mới – Trạm Sạc Trung Sơn">
+
+        <div class="form-note">
+          💡 Số điện thoại là thông tin quan trọng nhất – dùng để tra cứu và tích điểm mỗi lần ghé.
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="reg-name">Họ và tên *</label>
+          <input id="reg-name" type="text" name="ho_ten" class="form-input" placeholder="Nguyễn Văn A" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="reg-phone">Số điện thoại *</label>
+          <input id="reg-phone" type="tel" name="so_dien_thoai" class="form-input" placeholder="079 901 5699" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="reg-plate">Biển số xe (nếu có)</label>
+          <input id="reg-plate" type="text" name="bien_so_xe" class="form-input" placeholder="29A-12345">
+        </div>
+        <button type="submit" id="registerBtn" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 16px; font-size: 1rem;">
+          Đăng ký ngay – Miễn phí →
+        </button>
+        <p id="formError" style="display:none; text-align:center; font-size:0.82rem; margin-top:12px; color:#c0392b;">
+          Vui lòng điền đầy đủ họ tên và số điện thoại.
+        </p>
+        <p style="text-align: center; font-size: 0.8rem; margin-top: 16px; color: var(--text-muted);">
+          Hoặc báo trực tiếp nhân viên tại quầy · Hotline: <a href="tel:0799015699" style="color: var(--accent); font-weight: 700;">079 901 5699</a>
+        </p>
+      </form>
+
+      <!-- THÔNG BÁO THÀNH CÔNG -->
+      <div id="registerSuccess" style="display:none; text-align:center; padding: 32px 16px;">
+        <div style="font-size: 3rem; margin-bottom: 16px;">🎉</div>
+        <h3 style="color: var(--accent); margin-bottom: 8px;">Đăng ký thành công!</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">Cảm ơn bạn đã tham gia. Hãy ghé trạm và đọc số điện thoại cho nhân viên để bắt đầu tích điểm ngay hôm nay.</p>
+        <a href="tel:0799015699" class="btn btn-primary" style="display:inline-flex; gap:8px;">📞 Gọi ngay: 079 901 5699</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08);">
+      <p>© 2024 <span>Trạm Sạc Trung Sơn</span>. <a href="index.html" style="color: var(--accent);">← Về trang chủ</a></p>
+      <p>📞 <a href="tel:0799015699" style="color: var(--accent);">079 901 5699</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Formspree AJAX submit
+  const form = document.getElementById('registerForm');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const name = form.ho_ten.value.trim();
+      const phone = form.so_dien_thoai.value.trim();
+      const errEl = document.getElementById('formError');
+      if (!name || !phone) {
+        errEl.style.display = 'block';
+        return;
+      }
+      errEl.style.display = 'none';
+      const btn = document.getElementById('registerBtn');
+      btn.disabled = true;
+      btn.textContent = 'Đang gửi...';
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('registerSuccess').style.display = 'block';
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Đăng ký ngay – Miễn phí →';
+          alert('Có lỗi xảy ra. Vui lòng thử lại hoặc gọi hotline 079 901 5699.');
+        }
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Đăng ký ngay – Miễn phí →';
+        alert('Không thể kết nối. Vui lòng thử lại hoặc gọi hotline 079 901 5699.');
+      }
+    });
+  }
+</script>
+</body>
+</html>

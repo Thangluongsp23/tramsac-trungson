@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trạm Sạc Trung Sơn – Sạc nhanh · Nghỉ mát · Tích điểm</title>
+  <meta name="description" content="Trạm sạc xe điện Trung Sơn tại Hoằng Hóa, Thanh Hóa. Hệ thống sạc nhanh 120kW, không gian Xanh Coffee thư giãn, chương trình tích điểm hấp dẫn.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.JPG" alt="Trung Sơn Logo">
+        <div class="nav-logo-text">
+          <span>Trung Sơn</span>
+          <span>Xanh Coffee & EV Station</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Trang chủ</a></li>
+        <li><a href="tram-sac.html">Trạm sạc</a></li>
+        <li><a href="xanh-coffee.html">Xanh Coffee</a></li>
+        <li><a href="loyalty.html">Tích điểm</a></li>
+        <li><a href="uu-dai.html">Ưu đãi</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-cta">
+        <button class="nav-btn nav-btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Xem bản đồ</button>
+        <button class="nav-btn nav-btn-filled" onclick="location.href='loyalty.html'">Đăng ký</button>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close">✕</button>
+  <a href="#home">Trang chủ</a>
+  <a href="tram-sac.html">Trạm sạc</a>
+  <a href="xanh-coffee.html">Xanh Coffee</a>
+  <a href="loyalty.html">Tích điểm</a>
+  <a href="uu-dai.html">Ưu đãi</a>
+  <a href="blog.html">Blog</a>
+  <a href="#contact">Liên hệ</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Đang hoạt động · Trung Sơn, Hoằng Hóa
+        </div>
+        <h1 class="hero-title">
+          <span class="line">Sạc nhanh –</span>
+          <span class="line">Nghỉ mát –</span>
+          <span class="line highlight">Tích điểm</span>
+          <span class="line" style="color: var(--blue);">mỗi lần ghé</span>
+        </h1>
+        <p class="hero-sub">
+          Tại Trạm sạc Trung Sơn, bạn không chỉ sạc xe. Bạn có một điểm dừng đúng nghĩa: nhanh hơn, thoải mái hơn và đáng quay lại hơn.
+        </p>
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+            📍 Xem bản đồ trạm
+          </button>
+          <button class="btn btn-outline" onclick="location.href='loyalty.html'">
+            Đăng ký thành viên →
+          </button>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <span class="hero-stat-num" data-count="5" data-suffix=" trụ">0 trụ</span>
+            <span class="hero-stat-label">Trụ sạc DC</span>
+          </div>
+          <div>
+            <span class="hero-stat-num" data-count="120" data-suffix="kW">0kW</span>
+            <span class="hero-stat-label">Công suất tối đa</span>
+          </div>
+          <div>
+            <span class="hero-stat-num" data-count="24" data-suffix="/7">0/7</span>
+            <span class="hero-stat-label">Hoạt động</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-img-wrap">
+          <img src="1.jpg" alt="Trạm Sạc VinFast Trung Sơn – Xanh Coffee" class="hero-station-img">
+          <div class="hero-img-overlay">
+            <div class="hero-live-badge">
+              <span class="hero-badge-dot"></span> Đang hoạt động
+            </div>
+          </div>
+        </div>
+        <div class="hero-float-card card-1">
+          <span class="float-icon">☕</span>
+          <div class="float-text">
+            <strong>Xanh Coffee</strong>
+            <span>Mở cửa 7:30 – 22:00</span>
+          </div>
+        </div>
+        <div class="hero-float-card card-2">
+          <span class="float-icon">⚡</span>
+          <div class="float-text">
+            <strong>5 trụ sạc DC</strong>
+            <span>120kW + 60kW</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VALUES ===== -->
+<section id="values">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Giá trị cốt lõi</span>
+      <h2>Ba điều khiến bạn<br>muốn quay lại</h2>
+    </div>
+    <div class="values-grid stagger-children">
+      <div class="value-card">
+        <span class="value-icon">⚡</span>
+        <h3>Sạc nhanh</h3>
+        <p>Hệ thống 3 trụ 120kW + 2 trụ 60kW giúp tối ưu thời gian sạc cho mọi dòng xe điện. Không chờ lâu, không lãng phí thời gian.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">☕</span>
+        <h3>Nghỉ mát</h3>
+        <p>Không gian Xanh Coffee với điều hòa, giường nghỉ, đồ uống đa dạng giúp bạn thư giãn hoàn toàn trong lúc chờ sạc.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">🎁</span>
+        <h3>Tích điểm</h3>
+        <p>Mỗi lần sạc hoặc sử dụng dịch vụ đều được tích điểm đổi ưu đãi hấp dẫn. Càng dùng nhiều, càng nhiều lợi ích.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INTRO ===== -->
+<section class="section-alt" id="about">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-content reveal from-left">
+        <span class="section-tag">Giới thiệu trạm</span>
+        <h2>Điểm dừng lý tưởng cho mọi hành trình</h2>
+        <p>Nằm tại khu Trung Sơn – Hoằng Hóa, Trạm sạc Trung Sơn được xây dựng với định hướng không chỉ là nơi sạc xe, mà là một điểm dừng chân tiện nghi cho khách hàng.</p>
+        <p style="margin-top: 14px;">Với hệ thống trụ sạc công suất cao, không gian rộng rãi, mái che toàn khu vực và quán cà phê đi kèm, trạm mang lại trải nghiệm trọn vẹn cho cả tài xế và gia đình.</p>
+        <div class="intro-features">
+          <div class="intro-feature">
+            <div class="feature-icon">🔌</div>
+            <div class="feature-text">
+              <strong>Hệ thống sạc DC tốc độ cao</strong>
+              <span>5 trụ sạc công suất lớn, phục vụ nhiều xe cùng lúc</span>
+            </div>
+          </div>
+          <div class="intro-feature">
+            <div class="feature-icon">🏠</div>
+            <div class="feature-text">
+              <strong>Mái che toàn khu vực</strong>
+              <span>Bảo vệ xe và người dùng khỏi nắng mưa</span>
+            </div>
+          </div>
+          <div class="intro-feature">
+            <div class="feature-icon">📍</div>
+            <div class="feature-text">
+              <strong>Vị trí thuận tiện</strong>
+              <span>Khu Trung Sơn – Hoằng Hóa, dễ tiếp cận từ quốc lộ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-visual reveal from-right">
+        <div class="station-mockup" style="padding: 0; overflow: hidden;">
+          <div style="position: relative;">
+            <img src="1.jpg" alt="Trạm Sạc VinFast Trung Sơn" style="width:100%; height: 320px; object-fit: cover; display: block;">
+            <div style="position: absolute; inset:0; background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, transparent 50%, rgba(0,0,0,0.65) 100%);"></div>
+            <div style="position: absolute; top: 16px; left: 16px; display: flex; gap: 8px;">
+              <span style="background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); border: 1px solid rgba(0,240,122,0.3); color: var(--accent); padding: 5px 12px; border-radius: 100px; font-size: 0.72rem; font-weight: 700;">⚡ VinFast Partner</span>
+            </div>
+            <div style="position: absolute; top: 16px; right: 16px;">
+              <span style="background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); border: 1px solid rgba(0,240,122,0.3); color: var(--accent); padding: 5px 12px; border-radius: 100px; font-size: 0.72rem; font-weight: 700;">TTP Energy</span>
+            </div>
+          </div>
+          <div class="station-info-row" style="padding: 20px; background: var(--bg-card);">
+            <div class="station-info-item">
+              <strong>480kW</strong>
+              <span>Tổng công suất</span>
+            </div>
+            <div class="station-info-item">
+              <strong>10 xe</strong>
+              <span>Cùng lúc</span>
+            </div>
+            <div class="station-info-item">
+              <strong>24/7</strong>
+              <span>Hoạt động</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CHARGING SPECS ===== -->
+<section id="charging">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Hệ thống sạc</span>
+      <h2>Công suất mạnh – Hoạt động ổn định</h2>
+      <p>Hệ thống được tối ưu để rút ngắn thời gian sạc, duy trì nhiệt độ ổn định và đảm bảo an toàn khi vận hành.</p>
+    </div>
+    <div class="specs-grid">
+      <div class="specs-left reveal from-left">
+        <span class="spec-big-num" data-count="480" data-suffix="kW">0kW</span>
+        <span class="spec-big-label">Tổng công suất hệ thống</span>
+        <div class="specs-tags">
+          <span class="spec-tag">DC Fast Charging</span>
+          <span class="spec-tag">CCS2</span>
+          <span class="spec-tag">CHAdeMO</span>
+          <span class="spec-tag">Tất cả xe EV</span>
+        </div>
+        <p style="margin-top: 24px;">Phù hợp cho cả xe cá nhân và xe chạy dịch vụ đường dài. Hỗ trợ tất cả các dòng xe điện phổ biến tại Việt Nam.</p>
+        <button class="btn btn-primary" style="margin-top: 28px;" onclick="location.href='tram-sac.html'">
+          Chi tiết hệ thống →
+        </button>
+      </div>
+      <div>
+        <div class="specs-cards">
+          <div class="spec-card reveal scale-in" data-delay="0">
+            <span class="spec-card-num">3 <span class="spec-card-kw">trụ</span></span>
+            <h4>DC Sạc Nhanh 120kW</h4>
+            <p>Sạc từ 20% lên 80% chỉ trong ~35 phút. Lý tưởng cho xe dịch vụ và hành trình dài.</p>
+          </div>
+          <div class="spec-card reveal scale-in" data-delay="120">
+            <span class="spec-card-num">2 <span class="spec-card-kw">trụ</span></span>
+            <h4>DC Sạc 60kW</h4>
+            <p>Sạc linh hoạt cho xe cá nhân, phù hợp khi bạn muốn dừng nghỉ và dùng cà phê.</p>
+          </div>
+          <div class="spec-card reveal scale-in" data-delay="240" style="grid-column: 1 / -1;">
+            <div class="specs-features">
+              <div class="spec-feature">
+                <div class="spec-feature-dot"></div>
+                <span>Rút ngắn thời gian sạc tối đa</span>
+              </div>
+              <div class="spec-feature">
+                <div class="spec-feature-dot"></div>
+                <span>Duy trì nhiệt độ ổn định</span>
+              </div>
+              <div class="spec-feature">
+                <div class="spec-feature-dot"></div>
+                <span>Đảm bảo an toàn vận hành</span>
+              </div>
+              <div class="spec-feature">
+                <div class="spec-feature-dot"></div>
+                <span>Theo dõi qua ứng dụng</span>
+              </div>
+              <div class="spec-feature">
+                <div class="spec-feature-dot"></div>
+                <span>Thanh toán không tiền mặt</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COFFEE ===== -->
+<section class="section-alt" id="coffee">
+  <div class="container">
+    <div class="coffee-grid">
+      <div class="coffee-visual reveal from-left">
+        <div class="coffee-card-main">
+          <div class="coffee-img-placeholder" style="padding: 0; overflow: hidden; height: 280px;">
+            <img src="2.jpg" alt="Không gian Xanh Coffee" style="width:100%; height:100%; object-fit:cover; display:block;">
+            <div style="position:absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(transparent, rgba(0,0,0,0.85));">
+              <span style="font-size: 0.8rem; color: var(--accent); font-weight: 700; letter-spacing: 0.05em;">XANH COFFEE</span>
+              <p style="font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-top: 3px;">Không gian thư giãn trong lúc sạc</p>
+            </div>
+          </div>
+          <div class="coffee-card-content">
+            <div class="coffee-amenity-list">
+              <div class="amenity-item">
+                <div class="amenity-check">✓</div>
+                <span>Điều hòa mát mẻ, không gian sạch sẽ</span>
+              </div>
+              <div class="amenity-item">
+                <div class="amenity-check">✓</div>
+                <span>Giường nghỉ tiện nghi</span>
+              </div>
+              <div class="amenity-item">
+                <div class="amenity-check">✓</div>
+                <span>Đồ uống đa dạng, phục vụ nhanh</span>
+              </div>
+              <div class="amenity-item">
+                <div class="amenity-check">✓</div>
+                <span>WiFi miễn phí tốc độ cao</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="coffee-content reveal from-right">
+        <span class="section-tag">Xanh Coffee</span>
+        <h2>Không gian nghỉ chân lý tưởng trong lúc sạc</h2>
+        <p>Trong thời gian chờ sạc, bạn không cần ngồi trong xe. Xanh Coffee là không gian thư giãn được thiết kế dành riêng cho khách hàng trạm sạc.</p>
+        <p style="margin-top: 14px;">Một trải nghiệm <strong style="color: var(--accent)">"đáng tiền"</strong> hơn việc chỉ ngồi chờ trong xe – và là lý do để bạn muốn quay lại lần sau.</p>
+        <div class="coffee-perks">
+          <div class="perk-item">
+            <span class="perk-icon">❄️</span>
+            <span>Điều hòa mát lạnh</span>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">🛏️</span>
+            <span>Giường nghỉ ngơi</span>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">📶</span>
+            <span>WiFi miễn phí</span>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">🧃</span>
+            <span>Đồ uống đa dạng</span>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">🚿</span>
+            <span>Nhà vệ sinh sạch</span>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">🅿️</span>
+            <span>Bãi đỗ xe rộng</span>
+          </div>
+        </div>
+        <button class="btn btn-outline" style="margin-top: 28px;" onclick="location.href='xanh-coffee.html'">
+          Khám phá Xanh Coffee →
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU ===== -->
+<section id="menu">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Thực đơn</span>
+      <h2>Menu Xanh Coffee</h2>
+      <p>Đa dạng lựa chọn với giá hợp lý – được thiết kế phù hợp cho tài xế cần đồ uống nhanh, mát, dễ dùng.</p>
+    </div>
+
+    <div class="menu-tabs reveal">
+      <button class="menu-tab active" data-tab="cafe">☕ Cà phê</button>
+      <button class="menu-tab" data-tab="tra">🍵 Trà</button>
+      <button class="menu-tab" data-tab="nuocep">🧃 Nước ép & Sinh tố</button>
+      <button class="menu-tab" data-tab="suachua">🥛 Sữa chua</button>
+    </div>
+
+    <div class="menu-grid">
+      <!-- Cà phê -->
+      <div class="menu-category active" data-category="cafe">
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">☕</div>
+          <div class="menu-item-name">Cà phê đen</div>
+          <div class="menu-item-price">20.000đ</div>
+        </div>
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🤎</div>
+          <div class="menu-item-name">Cà phê nâu</div>
+          <div class="menu-item-price">25.000đ</div>
+        </div>
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🧂</div>
+          <div class="menu-item-name">Cà phê muối</div>
+          <div class="menu-item-price">25.000đ</div>
+        </div>
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🥛</div>
+          <div class="menu-item-name">Bạc xỉu</div>
+          <div class="menu-item-price">25.000đ</div>
+        </div>
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🍫</div>
+          <div class="menu-item-name">Cacao</div>
+          <div class="menu-item-price">30.000đ</div>
+        </div>
+      </div>
+
+      <!-- Trà -->
+      <div class="menu-category" data-category="tra">
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🍋</div>
+          <div class="menu-item-name">Trà tắc / Trà chanh</div>
+          <div class="menu-item-price">15.000đ</div>
+        </div>
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🍑</div>
+          <div class="menu-item-name">Trà đào</div>
+          <div class="menu-item-price">25.000đ</div>
+        </div>
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🫐</div>
+          <div class="menu-item-name">Trà việt quất</div>
+          <div class="menu-item-price">25.000đ</div>
+        </div>
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">✨</div>
+          <div class="menu-item-name">Trà đào macchiato</div>
+          <div class="menu-item-price">30.000đ</div>
+        </div>
+      </div>
+
+      <!-- Nước ép & Sinh tố -->
+      <div class="menu-category" data-category="nuocep">
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🍊</div>
+          <div class="menu-item-name">Nước ép cam</div>
+          <div class="menu-item-price">35.000đ</div>
+        </div>
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🍉</div>
+          <div class="menu-item-name">Nước ép dưa hấu</div>
+          <div class="menu-item-price">30.000đ</div>
+        </div>
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🥑</div>
+          <div class="menu-item-name">Sinh tố bơ</div>
+          <div class="menu-item-price">35.000đ</div>
+        </div>
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🍈</div>
+          <div class="menu-item-name">Sinh tố mãng cầu</div>
+          <div class="menu-item-price">35.000đ</div>
+        </div>
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🥭</div>
+          <div class="menu-item-name">Sinh tố xoài</div>
+          <div class="menu-item-price">30.000đ</div>
+        </div>
+      </div>
+
+      <!-- Sữa chua -->
+      <div class="menu-category" data-category="suachua">
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🧊</div>
+          <div class="menu-item-name">Sữa chua đánh đá</div>
+          <div class="menu-item-price">25.000đ</div>
+        </div>
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🌿</div>
+          <div class="menu-item-name">Sữa chua nha đam</div>
+          <div class="menu-item-price">30.000đ</div>
+        </div>
+        <div class="menu-item-card reveal">
+          <div class="menu-item-emoji">🫐</div>
+          <div class="menu-item-name">Sữa chua việt quất</div>
+          <div class="menu-item-price">30.000đ</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 36px;">
+      <button class="btn btn-outline" onclick="location.href='xanh-coffee.html'">Xem đầy đủ thực đơn →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOYALTY ===== -->
+<section class="section-alt" id="loyalty">
+  <div class="container">
+    <div class="loyalty-inner">
+      <div class="loyalty-card reveal from-left">
+        <div class="loyalty-points-display">
+          <div class="loyalty-circle">
+            <span style="font-size: 2.2rem; line-height:1;">☕</span>
+            <span class="loyalty-sub" style="margin-top: 6px;">mỗi ly = 1 điểm</span>
+          </div>
+          <p style="font-size: 0.82rem;">Chỉ cần báo số điện thoại – nhân viên tra cứu ngay</p>
+        </div>
+        <div class="loyalty-tiers">
+          <div class="tier-item">
+            <div class="tier-left">
+              <span class="tier-icon">☕</span>
+              <div>
+                <div class="tier-name">Ly cà phê miễn phí</div>
+                <div class="tier-req">Tích đủ ly theo quy định</div>
+              </div>
+            </div>
+            <span class="tier-badge bronze">Đồ uống</span>
+          </div>
+          <div class="tier-item">
+            <div class="tier-left">
+              <img src="khan-lau-xe.jpeg" alt="Khăn lau xe" style="width:36px;height:36px;border-radius:6px;object-fit:cover;flex-shrink:0;">
+              <div>
+                <div class="tier-name">Khăn lau xe ô tô</div>
+                <div class="tier-req">Tích đủ mốc quy định</div>
+              </div>
+            </div>
+            <span class="tier-badge silver">Quà tặng</span>
+          </div>
+          <div class="tier-item">
+            <div class="tier-left">
+              <img src="binh-giu-nhiet.jpeg" alt="Bình giữ nhiệt" style="width:36px;height:36px;border-radius:6px;object-fit:cover;flex-shrink:0;">
+              <div>
+                <div class="tier-name">Bình giữ nhiệt</div>
+                <div class="tier-req">Tích đủ mốc quy định</div>
+              </div>
+            </div>
+            <span class="tier-badge gold">Quà tặng</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal from-right">
+        <span class="section-tag">Chương trình tích điểm</span>
+        <h2>Uống cà phê – Tích ly – Nhận quà</h2>
+        <p>Hệ thống đơn giản, không cần app. Chỉ cần số điện thoại – nhân viên tra cứu và ghi nhận ngay tại quầy.</p>
+        <div class="loyalty-benefits">
+          <div class="benefit-item">
+            <div class="benefit-icon">☕</div>
+            <div class="benefit-text">
+              <strong>Mỗi ly đồ uống = 1 điểm</strong>
+              <span>Báo số điện thoại khi gọi đồ – hệ thống tự cộng dồn</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">⚡</div>
+            <div class="benefit-text">
+              <strong>Sạc xe cũng được tích điểm</strong>
+              <span>Mỗi lần sạc tại trạm được ghi nhận vào tài khoản</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🎁</div>
+            <div class="benefit-text">
+              <strong>Nhận quà: ly miễn phí · khăn lau xe · bình nước</strong>
+              <span>Trao tận tay tại quầy khi bạn tích đủ điều kiện</span>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" style="margin-top: 28px;" onclick="location.href='loyalty.html'">
+          Xem chi tiết chương trình →
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROMOTIONS ===== -->
+<section id="uu-dai">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Ưu đãi</span>
+      <h2>Ưu đãi mỗi ngày</h2>
+      <p>Nhiều chương trình khuyến mãi hấp dẫn dành cho khách hàng thân thiết và khách mới.</p>
+    </div>
+    <div class="promo-grid stagger-children">
+      <div class="promo-card">
+        <div class="promo-badge">Giờ thấp điểm</div>
+        <div class="promo-icon">⏰</div>
+        <h3>Sạc giờ thấp điểm</h3>
+        <p>Sạc trong khung giờ <strong>14:00–16:00</strong> hoặc <strong>18:00–20:00</strong>, được giảm ngay 20% đồ uống tại Xanh Coffee.</p>
+        <div class="promo-value">Giảm 20% đồ uống</div>
+      </div>
+      <div class="promo-card">
+        <div class="promo-badge">Combo tiết kiệm</div>
+        <div class="promo-icon">⚡☕</div>
+        <h3>Combo Sạc + Cà phê</h3>
+        <p>Mua đồ uống tại Xanh Coffee khi sạc xe, nhận ưu đãi giảm 10% tổng hóa đơn.</p>
+        <div class="promo-value">Giảm 10%</div>
+      </div>
+      <div class="promo-card">
+        <div class="promo-badge">Cuối tuần</div>
+        <div class="promo-icon">🎉</div>
+        <h3>Nhân đôi điểm</h3>
+        <p>Mọi giao dịch vào Thứ 7 và Chủ nhật được nhân đôi điểm thưởng tự động.</p>
+        <div class="promo-value">x2 điểm</div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 36px;">
+      <button class="btn btn-outline" onclick="location.href='uu-dai.html'">Xem tất cả ưu đãi →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section-alt" id="testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Khách hàng nói gì</span>
+      <h2>Trải nghiệm thực tế từ tài xế</h2>
+    </div>
+    <div class="testimonials-grid stagger-children">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Trạm rộng, sạc nhanh, có chỗ nghỉ mát – đi đường dài ghé đây rất hợp lý. Cà phê ngon mà giá cũng phải chăng."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, var(--accent), var(--accent-dark));">T</div>
+          <div>
+            <div class="author-name">Anh Tuấn</div>
+            <div class="author-detail">Tài xế VinFast VF8 · Hà Nội</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Lần đầu ghé vì tiện đường, sau này cứ có dịp qua là dừng. Nhân viên thân thiện, không gian sạch sẽ, tích điểm rất hay."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">H</div>
+          <div>
+            <div class="author-name">Chị Hương</div>
+            <div class="author-detail">VinFast VF8 · Thanh Hóa</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Sạc từ 20% lên 80% trong lúc ngồi uống trà đào. Quá tiện, không mất thời gian ngồi chờ trong xe nóng nữa."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">M</div>
+          <div>
+            <div class="author-name">Anh Minh</div>
+            <div class="author-detail">Tài xế VinFast VF9 · Nghệ An</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-banner reveal scale-in">
+      <span class="section-tag">Sẵn sàng chưa?</span>
+      <h2>Trải nghiệm trạm sạc<br>thế hệ mới</h2>
+      <p>"Biến thời gian chờ sạc thành trải nghiệm đáng quay lại."</p>
+      <div class="btn-group" style="justify-content: center;">
+        <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          📍 Xem bản đồ
+        </button>
+        <button class="btn btn-outline" onclick="location.href='loyalty.html'">
+          Đăng ký thành viên →
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Liên hệ</span>
+      <h2>Tìm chúng tôi</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal from-left">
+        <h2>Trạm Sạc Trung Sơn</h2>
+        <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn. Ghé thăm trạm hoặc liên hệ qua điện thoại.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-item-text">
+              <strong>Địa chỉ</strong>
+              <span>Lô 12+13, Khu dân cư Sau Thuế, TDP Trung Sơn, Hoằng Hóa, Thanh Hóa</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-item-text">
+              <strong>Điện thoại</strong>
+              <span><a href="tel:0799015699" style="color: var(--accent);">079 901 5699</a></span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div class="contact-item-text">
+              <strong>Giờ hoạt động</strong>
+              <span>Trạm sạc: 24/7 · Xanh Coffee: 7:30 – 22:00</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              <span><a href="mailto:congtyttpenergy@gmail.com" style="color: var(--accent);">congtyttpenergy@gmail.com</a></span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div class="contact-item-text">
+              <strong>Mạng xã hội</strong>
+              <div style="display:flex; flex-direction:column; gap:6px; margin-top:4px;">
+                <a href="https://www.facebook.com/tramsacvinfasttrungson" target="_blank" rel="noopener" class="social-link-pill"><span>f</span> Facebook – Trạm Sạc VinFast Trung Sơn</a>
+                <span style="color: var(--text-muted); font-size:0.85rem;">Zalo: 079 901 5699</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map reveal from-right">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778!2d105.8537953!3d19.8478164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313659ee938e75a5%3A0xac082eb012de2c95!2sXanh%20Coffee!5e0!3m2!1svi!2svn!4v1714590000000!5m2!1svi!2svn"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Bản đồ Xanh Coffee – Trạm Sạc Trung Sơn">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QR GÓP Ý ===== -->
+<section id="feedback-qr" class="section-alt">
+  <div class="container">
+    <div class="feedback-qr-wrap reveal">
+      <div class="feedback-qr-text">
+        <span class="section-tag">Góp ý</span>
+        <h2>Ý kiến của bạn giúp chúng tôi <span class="accent">hoàn thiện hơn</span></h2>
+        <p>Quét mã QR để gửi phản hồi, góp ý hoặc đánh giá dịch vụ. Mọi ý kiến đều được ghi nhận và phản hồi.</p>
+        <ul class="feedback-qr-points">
+          <li>✅ Góp ý về chất lượng dịch vụ sạc</li>
+          <li>✅ Phản hồi về đồ uống tại Xanh Coffee</li>
+          <li>✅ Ý tưởng cải tiến không gian</li>
+          <li>✅ Báo cáo sự cố cần hỗ trợ</li>
+        </ul>
+      </div>
+      <div class="feedback-qr-box">
+        <div class="qr-frame">
+          <img src="qrcode_TTP.png" alt="QR Code góp ý Trạm Sạc Trung Sơn">
+        </div>
+        <p class="qr-caption">Quét để gửi góp ý</p>
+        <p class="qr-subcaption">Hỗ trợ mọi thiết bị · Miễn phí</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="logo.JPG" alt="Trung Sơn Logo">
+          <div class="footer-logo-text">
+            <span>Trung Sơn</span>
+            <span>Xanh Coffee & EV Station</span>
+          </div>
+        </div>
+        <p>"Biến thời gian chờ sạc thành trải nghiệm đáng quay lại."</p>
+      </div>
+      <div class="footer-col">
+        <h5>Dịch vụ</h5>
+        <ul>
+          <li><a href="tram-sac.html">Trạm sạc xe điện</a></li>
+          <li><a href="xanh-coffee.html">Xanh Coffee</a></li>
+          <li><a href="loyalty.html">Chương trình tích điểm</a></li>
+          <li><a href="uu-dai.html">Ưu đãi hàng ngày</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Thông tin</h5>
+        <ul>
+          <li><a href="blog.html">Blog & Tin tức</a></li>
+          <li><a href="blog.html">Mẹo dùng xe điện</a></li>
+          <li><a href="blog.html">Lịch bảo trì trạm</a></li>
+          <li><a href="#about">Về chúng tôi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Hỗ trợ</h5>
+        <ul>
+          <li><a href="tel:0799015699">Hotline: 079 901 5699</a></li>
+          <li><a href="mailto:congtyttpenergy@gmail.com">congtyttpenergy@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/tramsacvinfasttrungson" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+          <li><a href="#feedback-qr">Góp ý</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Địa chỉ</h5>
+        <ul>
+          <li><a href="#contact">Lô 12+13, KDC Sau Thuế</a></li>
+          <li><a href="#contact">TDP Trung Sơn</a></li>
+          <li><a href="#contact">Hoằng Hóa, Thanh Hóa</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 <span>Trạm Sạc Trung Sơn</span>. Bảo lưu mọi quyền.</p>
+      <p>Thiết kế bởi <span>Trung Sơn Xanh Coffee</span></p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

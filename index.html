@@ -12,6 +12,41 @@
 </head>
 <body>
 
+<!-- ===== EVENT TICKER =====
+     Thêm sự kiện mới: copy một block .event-item và cập nhật nội dung.
+     Lưu ảnh sự kiện vào thư mục project (vd: event-30-04.jpg) để hiển thị thumbnail. -->
+<div class="event-ticker" id="eventTicker">
+  <span class="ticker-label">📢 SỰ KIỆN</span>
+  <div class="ticker-viewport">
+    <div class="ticker-track" id="tickerTrack">
+
+      <!-- SỰ KIỆN 1: Kỷ niệm 30/04 -->
+      <div class="event-item">
+        <img src="event-30-04.jpg" class="event-item-img" alt="" onerror="this.style.display='none'">
+        <span class="event-item-tag" style="background:#c0392b">30/04/2026</span>
+        <span class="event-item-text">Kỷ niệm 51 năm Ngày Giải phóng Miền Nam · Giảm 15% đồ uống toàn ngày tại Xanh Coffee</span>
+      </div>
+      <span class="ticker-sep">✦</span>
+
+      <!-- SỰ KIỆN 2: 01/05 Quốc tế Lao động -->
+      <div class="event-item">
+        <span class="event-item-tag" style="background:#1251a3">01/05/2026</span>
+        <span class="event-item-text">Quốc tế Lao động · Giảm 15% tất cả đồ uống tại Xanh Coffee</span>
+      </div>
+      <span class="ticker-sep">✦</span>
+
+      <!-- SỰ KIỆN 3: Ưu đãi cuối tuần -->
+      <div class="event-item">
+        <span class="event-item-tag" style="background:#007d3e">Mỗi cuối tuần</span>
+        <span class="event-item-text">Thứ 7 &amp; Chủ nhật · Nhân đôi điểm tích lũy cho mọi giao dịch</span>
+      </div>
+      <span class="ticker-sep">✦</span>
+
+    </div>
+  </div>
+  <button class="ticker-close" id="tickerClose" aria-label="Đóng thông báo">✕</button>
+</div>
+
 <!-- ===== NAVBAR ===== -->
 <nav class="navbar" id="navbar">
   <div class="container">

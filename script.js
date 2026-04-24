@@ -1,3 +1,26 @@
+// ===== EVENT TICKER =====
+(function () {
+  const ticker = document.getElementById('eventTicker');
+  const closeBtn = document.getElementById('tickerClose');
+  const track = document.getElementById('tickerTrack');
+  if (!ticker) return;
+
+  // Restore dismissed state
+  if (localStorage.getItem('tickerClosed') === '1') {
+    ticker.classList.add('ticker-hidden');
+  } else {
+    document.body.classList.add('has-ticker');
+    // Duplicate track content for seamless infinite scroll
+    if (track) track.innerHTML += track.innerHTML;
+  }
+
+  closeBtn?.addEventListener('click', () => {
+    ticker.classList.add('ticker-hidden');
+    document.body.classList.remove('has-ticker');
+    localStorage.setItem('tickerClosed', '1');
+  });
+})();
+
 // ===== NAVBAR SCROLL =====
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
